@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Asjs</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<style>
+			:root {
+				--bg-color: white;
+				--text-color: #454545;
+			}
+			* .inverted {
+				--bg-color: #36393f;
+				--text-color: #dcddde;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--bg-color: #36393f;
+					--text-color: #dcddde;
+				}
+				* .inverted {
+					--bg-color: white;
+					--text-color: #454545;
+				}
+			}
+			*:any-link {
+				color: inherit;
+			}
+			body {
+				font-family: Open Sans, Arial;
+				background-color: var(--bg-color);
+				color: var(--text-color);
+				font-size: 32px;
+				margin: 2em auto;
+				max-width: 800px;
+				padding: 1em;
+				line-height: 1.4;
+				text-align: justify;
+				text-align: center;
+			}
+			small {
+				font-size: 0.2em;
+			}
+			medium {
+				font-size: 0.5em;
+			}
+			h1 {
+				margin: 0.5em auto;
+			}
+			code {
+				background-color: #2f3136;
+				color: white;
+				padding: 0.2em;
+				font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console,
+					Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+					Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier,
+					monospace;
+				display: block;
+			}
+			.topButton {
+				position: absolute;
+				font-size: 0.75em;
+				right: 1em;
+				top: 0.5em;
+				cursor: pointer;
+				user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="topButton" id="invert">Invert!</span>
+		Welcome!<br />This is a dead-simple way of using pastebin for javascript
+		hosting <small>For example, CC mod hosting</small><br />
+		<h1>API</h1>
+		<br />
+		It shouldn't come as a surprise that the API is dead simple too!<br />
+		All you have to do is to append the pastebin id to the end to this page:
+		<code><a href=":id">https://glander.club/asjs/:id</a></code>
+		For example,
+		<medium
+			><code
+				><a href="TmwKCkYR">https://glander.club/asjs/TmwKCkYR</a></code
+			></medium
+		>
+		<script>
+			document.querySelector("#invert").addEventListener("click", () => {
+				document.body.classList.toggle("inverted")
+			})
+		</script>
+	</body>
+</html>
